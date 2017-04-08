@@ -1,0 +1,75 @@
+@import "~styles/pulic.less";
+.header{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  .fake_head{
+    font-family: @font;
+    height:@header_height;
+    line-height: @header_height;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    .title{
+    font-family: @font;
+      color:#FFF;
+      font-size: 1.4rem;
+      span{
+        display: inline-block;
+        padding: 0 10px;
+      }
+    }
+    .more{
+      padding-right:10px;
+    font-family: @font;
+      color:#FFF;
+      font-size: 1.4rem;
+    }
+  }
+  .head{
+    font-family: @font;
+    height:@header_height;
+    line-height: @header_height;
+    background: #FFF;
+    overflow: hidden;
+    padding: 0 10px;
+    .logo_img{
+      float: left;
+      width:24%;
+      margin-top:8px;
+      img{
+        width: 100%;
+      }
+    }
+    .seek{
+      float:right;
+      width:70%;
+      margin-top:8px;
+      border:1px solid #EDECEC;
+      height:30px;
+      overflow: hidden;
+      input{
+        float: left;
+        width:70%;
+        height:28px;
+        font-size: 1rem;
+        padding: 0 5px;
+        border: none;
+        outline: none;
+      }
+      .icon{
+        float: right;
+        display: block;
+        width:30px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+    font-family: @font;
+        font-size: 1.4rem;
+        color:#0D8CD3;
+        border-left: 1px solid #EDECEC;
+      }
+    }
+  }
+}
