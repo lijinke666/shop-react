@@ -2,9 +2,11 @@
  * Created by lijinke on 17/1/12.
  */
 import React from "react"
+import {Slider,createTooltip} from "antd-mobile"
 //connect   将 视图层 与 状态层 分开
 import { connect } from "react-redux"
 
+const SliderWithTooltip = createTooltip(Slider);
 @connect(
   ({ InputAction })=>({                 //这里箭头函数 {}  会当成一个表达式  但是我们要对象 所以加个括号
     size:InputAction.size,
@@ -36,7 +38,13 @@ export default class Input extends React.Component {
     return (
       <div className="index" key="Input">
         <h2>当前大小 {size}</h2>
-        <input type="range" onChange={onSizeChange} value={size} placeholder="请输入大小" step="0.01" max="1000" min="100" />
+        <Slider
+          defaultValue={26}
+          min={100}
+          max={1000}
+          step={0.01}
+          onChange={onSizeChange}
+          />
         <h2>当前颜色 {color}</h2>
         <input type="color" onChange={onColorChange} placeholder="请输入大小" />
       </div>

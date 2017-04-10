@@ -1,34 +1,19 @@
 import React from 'react'
+import {Link} from 'react-router'
 import "./styles.less"
 
 export default class Header extends React.Component {
-    state = {
-        value:""
+    static defaultProps = {
+        title:"首页"
     }
     render() {
+        const {title} = this.props
         return (
-            <div key="header" className="header">
-                <div className="fake_head">
-                    <div className="title"><span>&#xe667;</span>配件商城</div>
-                    <div className="more">&#xe60e;</div>
-                </div>
-                <div className="head">
-                    <div className="logo_img"><img src={require('images/logo.png')} /></div>
-                    <div className="seek">
-                        <input type="text" placeholder="请输入您要搜索的商品" onChange={this.onChange} />
-                        <div className="icon" onClick={this.search}><span>&#xe602;</span></div>
-                    </div>
-                </div>
-            </div>
+            <header key="header" className="flex flex-vc">
+                <div className="l box-flex-1 text-left"><Link to="/"><i className="icon icon-chanping"></i></Link></div>
+                <div className="c box-flex-1 text-center"><h1>{title}</h1></div>
+                <div className="r box-flex-1 text-right"><Link to="/"><i className="icon icon-chanping"></i></Link></div>
+            </header>
         )
-    }
-    onChange = (e)=>{
-        this.setState({
-            value:e.target.value
-        })
-    }
-    search = ()=>{
-        const {value} = this.state;
-        alert(value)
     }
 }

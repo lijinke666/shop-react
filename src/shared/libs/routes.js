@@ -17,6 +17,18 @@ export default {
             component:Home
         },
         {
+            path:"game",
+            component:Game
+        },
+        {
+            path:"music",
+            component:Music
+        },
+        {
+            path:"music/:id",
+            component:MusicDetail
+        },
+        {
             path:"about",
             component:About
         }

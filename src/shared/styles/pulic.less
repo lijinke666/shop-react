@@ -1,7 +1,13 @@
+@import 'vars.less';
 @import 'mixin.less';
-@import "iconfont.less";
+@import 'iconfont.less';
+
+/* 页面大于480时整体放大页面内容 */
+@media only screen and (min-width: 480px) { html { font-size: 16px; } }
+@media only screen and (min-width: 1280px) { html { font-size: 18px; } }
+
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
-/** ==== 层次关系(z-index) ==== 基础内容，图片切换，分页...：9999以下 页面选择框/提示框：10000-10999 顶部底部右侧浮动层：11000-11999 弹层：12000-12999 错误警告：13000-13999 */
+
 .clear { clear: both; }
 
 .left { float: left; }
@@ -65,32 +71,32 @@ em.none { font-style: normal; }
 .border-none { border: none; outline: medium; }
 
 /*box布局*/
-.flex { display: box; /* OLD - Android 4.4- */ display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; }
+.flex { display: box;display: flex; }
 
 /*横向排列*/
-.flex-hx { /* 09版 */ -webkit-box-orient: borizontal; -moz-box-orient: borizontal; -ms-box-orient: borizontal; box-orient: borizontal; /* 12版 */ -webkit-flex-direction: row; -moz-flex-direction: row; -ms-flex-direction: row; -o-flex-direction: row; flex-direction: row; }
+.flex-hx {  box-orient: borizontal;flex-direction: row; }
 
 /*纵向排列*/
-.flex-zx { /* 09版 */ -webkit-box-orient: vertical; -moz-box-orient: vertical; -ms-box-orient: vertical; box-orient: vertical; /* 12版 */ -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; -o-flex-direction: column; flex-direction: column; }
+.flex-zx {  box-orient: vertical; flex-direction: column; }
 
 /*水平居中*/
-.flex-hc { /* 09版 */ -webkit-box-pack: center; -moz-box-pack: center; -ms-box-pack: center; box-pack: center; /* 12版 */ -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; -o-justify-content: center; justify-content: center; 	/* 其它取值如下： align-items	 主轴原点方向对齐 flex-end		主轴延伸方向对齐 space-between   等间距排列，首尾不留白 space-around	等间距排列，首尾留白 */ }
+.flex-hc { box-pack: center; justify-content: center; 	/* 其它取值如下： align-items	 主轴原点方向对齐 flex-end		主轴延伸方向对齐 space-between   等间距排列，首尾不留白 space-around	等间距排列，首尾留白 */ }
 
 /*垂直居中*/
-.flex-vc { /* 09版 */ -webkit-box-align: center; -moz-box-align: center; -ms-box-align: center; box-align: center; /* 12版 */ -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; -o-align-items: center; align-items: center; }
+.flex-vc { align-items: center; }
 
 /* 父元素-横向换行 */
-.flex-hw { /* 09版 */ -webkit-box-lines: multiple; -ms-box-lines: multiple; box-lines: multiple; /* 12版 */ -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; -o-flex-wrap: wrap; flex-wrap: wrap; }
+.flex-hw { box-lines: multiple;  flex-wrap: wrap; }
 
-.box-flex-1 { -webkit-box-flex: 1; -moz-box-flex: 1; -ms-box-flex: 1; box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.box-flex-1 { box-flex: 1; flex: 1; }
 
-.box-flex-2 { -webkit-box-flex: 2; -moz-box-flex: 2; -ms-box-flex: 2; box-flex: 2; -webkit-flex: 2; -ms-flex: 2; flex: 2; }
+.box-flex-2 {box-flex: 2;  flex: 2; }
 
 .box-flex-33 { -webkit-flex: 0 0 33.3%; }
 
 .ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pull-right{ float: right;}
-.pull-left{ float:left;}
+.pull-right{ float: right !important}
+.pull-left{ float:left !important}
 /* public */
 *, :before, :after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -99,15 +105,7 @@ html { font-size: 10px; height: 100%; }
 body, input, select, button, textarea { font-family: Arial, 'Microsoft YaHei', Verdana, sans-serif; line-height: 1.6; -webkit-tap-highlight-color: transparent; }
 
 body { margin: 0; padding: 0; background: #f8f8f8; color: #444; font-size: 1.4rem;user-select:none }
-body,
-html {
-  position: relative;
-  padding: 0px;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
+
 a:hover, a:active { outline: 0; }
 
 a { color: #333; text-decoration: none; }
@@ -171,39 +169,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .select-noborder { -moz-appearance: none; -webkit-appearance: none; padding: 0.5rem 0.8rem; font-size: inherit; display: inline-block; vertical-align: middle; background: none; border: none; }
 
-/* 页面大于480时整体放大页面内容 */
-@media only screen and (min-width: 480px) { html { font-size: 16px; } }
-@media only screen and (min-width: 1280px) { html { font-size: 18px; } }
+
 /* 向右的箭头 */
 .arrow-r { position: relative; }
 
 .arrow-r::before { content: ""; position: absolute; top: 50%; right: 0.3rem; width: 1rem; height: 1rem; margin-top: -0.35rem; border: solid rgba(0, 0, 0, 0.2); border-width: 0.2rem 0.2rem 0 0; }
 
-/* 头部 */
-header h1 { margin: 0; font-size: 1.8rem; color: #FFF; }
-header .l { padding-left: 1.2rem; }
-header .r { padding-right: 1.2rem; }
-header div a:visited,header li a:visited, header li a{ color: #FFF; }
-header div a { color: #FFF; font-size: 2rem; }
-header{
-    width: 100%;
-     background-color:@main-color; 
-     height: 4.8rem;
-    nav{
-        height: 4.8rem;
-        line-height: 4.8rem;
-        li.active{
-            border-bottom:1px solid #FFF;
-            a{
-                color:#F5BE3F;
-            }
-        }
-        a{
-            display: block;
-        }
-    }
-}
-header ~ .header-margin { margin-top: 4.8rem; }
+
 
 .text-left { text-align: left; }
 
@@ -213,7 +185,7 @@ header ~ .header-margin { margin-top: 4.8rem; }
 
 .margin-none { margin: 0; }
 .img-bespread{ width: 100%;}
-header.index ~ .header-margin { margin-top: 5rem; }
+
 
 .nav { height: 4rem; background: #EB6001; color: #FFF; font-size: 1.6rem; line-height: 4rem; }
 .nav ul { margin: 0; padding: 0; list-style: none; }
@@ -233,6 +205,7 @@ header.index ~ .header-margin { margin-top: 5rem; }
 .login-banner .swiper-pagination-bullet { background: rgba(255, 255, 255, 0.5); opacity: 1; }
 .login-banner .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #EB6001; }
 
+.padding { font-size: 1.6rem; min-height: 4.6rem; padding: 0.8rem 1.2rem; line-height: 2.2rem; border-bottom: 1px solid #eee; }
 .section { margin: 0; background: #FFF; overflow: hidden;    box-shadow: 0 3px 3px 0 rgba(0,0,0,.05); }
 .section > *:last-child { border-bottom: none; margin-bottom: -1px; }
 
@@ -242,14 +215,6 @@ header.index ~ .header-margin { margin-top: 5rem; }
 
 *.mt1rem { margin-top: 1rem; }
 
-.fixed100 { padding: 4.8rem 0 6rem; height: 100%; }
-
-.fixedfooter { height: 6rem; padding: 1rem; background: #FFF; border-top: 1px solid #eee; font-size: 1.6rem; }
-.fixedfooter .btn { height: 4rem; }
-.fg{
-    margin: 0 10px;
-    color:#FFF;
-}
 
 @backWidth :4rem;
 .back-top{
@@ -266,7 +231,7 @@ header.index ~ .header-margin { margin-top: 5rem; }
     background-color: rgba(0,0,0,0.6);
     display: none;
 }
-.recharge-col { font-size: 1.6rem; min-height: 4.6rem; padding: 0.8rem 1.2rem; line-height: 2.2rem; border-bottom: 1px solid #eee; }
+
 /* 确认框 */
 /* line 119, ../sass/include/base.scss */
 .window-confirm {
@@ -332,16 +297,15 @@ header.index ~ .header-margin { margin-top: 5rem; }
       text-align: left;
       font-size: 1.4rem !important;
       color: #777; }
-    /* line 131, ../sass/include/base.scss */
     .window-confirm .new-wrap .title {
       height: 4rem;
       line-height: 4rem;
       padding: 0 1rem 0;
       border-bottom: 1px solid #ddd; }
-    /* line 132, ../sass/include/base.scss */
+
     .window-confirm .new-wrap section {
       padding: 1.5rem; }
-  /* line 135, ../sass/include/base.scss */
+
   .window-confirm .wrap-icon {
     width: 75%;
     height: 20rem;
@@ -361,9 +325,8 @@ header.index ~ .header-margin { margin-top: 5rem; }
     transform:scale(0);
     animation: Popup-animate .5s ease forwards;
   }
-  @keyframes Popup-animate { 0% { opacity: 0.7; -moz-transform: scale(1) translateY(-50px); -ms-transform: scale(1) translateY(-50px); -webkit-transform: scale(1) translateY(-50px); transform: scale(1) translateY(-50px); }
-    100% { opacity: 1; -moz-transform: scale(1) translateY(0px); -ms-transform: scale(1) translateY(0px); -webkit-transform: scale(1) translateY(0px); transform: scale(1) translateY(0px); } }
-    /* line 137, ../sass/include/base.scss */
+  @keyframes Popup-animate { 0% { opacity: 0.7; transform: scale(1) translateY(-50px); }
+    100% { opacity: 1; transform: scale(1) translateY(0px); } }
     .window-confirm .wrap-icon .box-icon {
       font-size: 7.5rem !important;
       font-weight: normal !important;
@@ -388,36 +351,28 @@ header.index ~ .header-margin { margin-top: 5rem; }
   background: rgba(0, 0, 0, 0.5);
   z-index: 12000;
   padding: 1rem; }
-  /* line 145, ../sass/include/base.scss */
   .window-pop .wrap {
     width: 20rem;
     max-width: 100%;
     margin: 0 auto;
     background: #fff;
     overflow: hidden; }
-    /* line 146, ../sass/include/base.scss */
     .window-pop .wrap div.window-pop-content {
       font-size: 1.2rem;
       padding: 1rem;
       display: block; }
-    /* line 148, ../sass/include/base.scss */
     .window-pop .wrap div.window-pop-btns {
-      display: -webkit-box;
-      display: box;
+      display: flex;
       border-top: 1px solid #ddd; }
-    /* line 149, ../sass/include/base.scss */
     .window-pop .wrap div.window-pop-btns span {
       display: block;
       text-align: center;
       padding: 0.6rem;
       cursor: pointer; }
-    /* line 150, ../sass/include/base.scss */
     .window-pop .wrap div.window-pop-btns span:first-child {
       border-right: 1px solid #ddd; }
-    /* line 151, ../sass/include/base.scss */
     .window-pop .wrap div.window-pop-btns span:active {
       background: #eee; }
-    /* line 153, ../sass/include/base.scss */
     .window-pop .wrap .title {
       height: 3em;
       line-height: 3rem;

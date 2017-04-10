@@ -4,7 +4,7 @@ import RotateBox from 'app/components/RotateBox'
 
 const Game = (props) => {
   return(
-    <div key="game">
+    <div key="game" className="padding section">
       <Input/>
       <RotateBox/>
     </div>

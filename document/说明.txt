@@ -17,3 +17,24 @@
 然后
 #运行 npm start
 #打包 npm run build
+
+/*====================== 【git 常用命令】================================*/
+git diff    查看差异
+git add   添加改变文件到暂存区
+git commit  -m '保存信息'    添加到本地仓库
+git push     将本地仓库文件 发送到远端仓库
+git pull     同步本地与远端仓库  拉取并合并  git fetch 和 merge  的两部操作
+git merge  合并分支
+git fetch   同步本地与远端仓库
+git branch  -r  列出所有分支
+git branch  分支名字   新建分支
+git checkout  分支名字    切换到分支
+git checkout -b    创建并切换到分支
+git reset HEAD .   取消本地暂存
+git cherry-pick  'hash码'    添加一个分支的变化到这个分支上
+git branch -m 旧分支  新分支        修改分支名
+git rebase -i HEAD~     push到远程分支后还想修改提交信息可以用这个
+git push -f    强制push
+git stash  暂存所有的东西   
+git stash pop 把暂存的释放出来
+git reset --hard HEAD~1    git push --force   如果有一次远程提交时错误的可以撤销，但是你这次提交之后又有提交也会没有

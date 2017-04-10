@@ -11,10 +11,10 @@
   "plugins": [
     ["import", { "style": "css", "libraryName": "antd-mobile" }],
     "transform-async-to-generator",     //支持async写法
-    "transform-decorators-legacy",
+    "transform-decorators-legacy",     //类的修饰器
     "transform-object-rest-spread",
-    "transform-class-properties",
-    "transform-runtime",
+    "transform-class-properties",  //class类静态属性
+    "transform-runtime",           //babel只解析es6语法  不编译新增的一些方法 如promise async  所以要用这个
     "react-hot-loader/babel"      //热跟新
   ]
 }

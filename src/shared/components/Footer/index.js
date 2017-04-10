@@ -5,46 +5,23 @@ import "./styles.less"
 export default class Footer extends React.Component {
     render() {
         return (
-            <footer key="footer" className="footer">
-                <ul className="none list">
-                    <li>
-                    <IndexLink href="/" activeClassName="tab-active">
-                        <div>
-                            <span><i className="iconfont icon-shouye"></i></span>
-                            <p>首页</p>
-                        </div>
-                    </IndexLink>
-                    </li>
-                    <li>
-                        <div>
-                            <span><i className="iconfont icon-chanpin"></i></span>
-                            <p>产品</p>
-                            <Link href="/about" />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span><i className="iconfont icon-gouwuche"></i></span>
-                            <p>购物车</p>
-                            <Link href="#" />
-                        </div>
-                        <div className="bar">+3</div>
-                    </li>
-                    <li>
-                        <div>
-                            <span><i className="iconfont icon-kefu"></i></span>
-                            <p>客服</p>
-                            <Link href="#" />
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span><i className="iconfont icon-wode"></i></span>
-                            <p>我的</p>
-                            <Link href="#" />
-                        </div>
-                    </li>
-                </ul>
+            <footer className="section flex text-center flex-vc flex-hc">
+                <Link to="/" className="box-flex-1">
+                    <div className="icon icon-dianhua active"></div>
+                    <span className="active">首页</span>
+                </Link>
+                <Link to="/music" className="box-flex-1">
+                    <div className="icon icon-liwu"></div>
+                    <span>音乐</span>
+                </Link>
+                <Link to="/about" className="box-flex-1">
+                    <div className="icon icon-ditu"></div>
+                    <span>关于</span>
+                </Link>
+                <Link to="/game" className="box-flex-1">
+                    <div className="icon icon-nikoqianbi"></div>
+                    <span>游戏</span>
+                </Link>
             </footer>
         )
     }
