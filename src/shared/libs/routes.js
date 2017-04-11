@@ -18,7 +18,11 @@ export default {
         },
         {
             path:"game",
-            component:Game
+            getComponent(location, cb) {
+                System.import('app/components/Game')
+                    .then((module) => cb(null, module.default))
+                    .catch(err => console.log('aaa',err))
+            }
         },
         {
             path:"music",
@@ -30,7 +34,11 @@ export default {
         },
         {
             path:"about",
-            component:About
+            getComponent(location, cb) {
+                System.import('app/components/About')
+                    .then((module) => cb(null, module.default))
+                    .catch(err => console.log('aaa',err))
+            }
         }
     ]
 }

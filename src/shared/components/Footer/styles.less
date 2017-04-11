@@ -6,21 +6,23 @@ footer{
     left:0;
     border-top: 1px solid @border-color;
     z-index: 9999;
-    >a{
-        padding-top:0.3rem;
-        div{
-            font-size: 2.2rem;
-            margin-bottom:0.2rem;
-            transition:color .2s;
-        }
-        span{
-            font-size: 1.7rem;
-        }
-        .active{
+    .active{
+        div,span{
             color:@primary-color;
         }
     }
+    >a{
+        padding-top:3px;
+        div{
+            font-size: 22px;
+            margin-bottom:2px;
+            transition:color .2s;
+        }
+        span{
+            font-size: 17px;
+        }
+    }
     .price-bottom{
-        margin-bottom: 0.4rem;
+        margin-bottom: 4px;
     }
 }

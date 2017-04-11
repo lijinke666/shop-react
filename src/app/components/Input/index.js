@@ -14,10 +14,10 @@ const SliderWithTooltip = createTooltip(Slider);
   }),
   (dispatch)=>({
         //dispath type字段必须  payload 就是携带的信息
-    onSizeChange: (e) => {
+    onSizeChange: (value) => {
       dispatch({
         type: "sizeChange",
-        size: e.target.value
+        size: value
       })
     },
     onColorChange: (e) => {
@@ -43,7 +43,7 @@ export default class Input extends React.Component {
           min={100}
           max={1000}
           step={0.01}
-          onChange={onSizeChange}
+          onChange={(value)=> onSizeChange(value)}
           />
         <h2>当前颜色 {color}</h2>
         <input type="color" onChange={onColorChange} placeholder="请输入大小" />

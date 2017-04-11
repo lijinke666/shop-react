@@ -3,8 +3,8 @@
 @import 'iconfont.less';
 
 /* 页面大于480时整体放大页面内容 */
-@media only screen and (min-width: 480px) { html { font-size: 16px; } }
-@media only screen and (min-width: 1280px) { html { font-size: 18px; } }
+// @media only screen and (min-width: 480px) { html { font-size: 16px; } }
+// @media only screen and (min-width: 1280px) { html { font-size: 18px; } }
 
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
 
@@ -52,17 +52,17 @@ em.none { font-style: normal; }
 
 .color-main { color: #EB6001; }
 
-.fz1rem { font-size: 1rem; }
+.fz1rem { font-size: 10px; }
 
-.fz12rem { font-size: 1.2rem; }
+.fz12rem { font-size: 12px; }
 
-.fz14rem { font-size: 1.4rem; }
+.fz14rem { font-size: 14px; }
 
-.fz16rem { font-size: 1.6rem; }
+.fz16rem { font-size: 16px; }
 
-.fz18rem { font-size: 1.8rem; }
+.fz18rem { font-size: 18px; }
 
-.fz2rem { font-size: 2rem; }
+.fz2rem { font-size: 20px; }
 
 .hidden { display: none !important; }
 
@@ -126,7 +126,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 ::selection { background: #EB6001; color: #fff; text-shadow: none; }
 
 /* 按钮 */
-.btn { display: inline-block; font-size: inherit; padding: 0.5rem 0.8rem; border: 1px solid transparent; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; }
+.btn { display: inline-block; font-size: inherit; padding: 5px 8px; border: 1px solid transparent; text-align: center; white-space: nowrap; vertical-align: middle; cursor: pointer; }
 
 .btn:active { -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
 
@@ -161,20 +161,13 @@ table { border-collapse: collapse; border-spacing: 0; }
 .btn.disabled { background: #ddd; border-color: #ddd; color: #999; }
 
 /* 输入框 */
-.inp { border: 1px solid #ddd; outline:none; padding: 0.5rem 0.8rem; font-size: inherit; display: inline-block; vertical-align: middle; background-color: #fff; border-radius: 0.3rem; -moz-appearance: none; -webkit-appearance: none; }
+.inp { border: 1px solid #ddd; outline:none; padding: 5px 8px; font-size: inherit; display: inline-block; vertical-align: middle; background-color: #fff; border-radius: 3px; -moz-appearance: none; -webkit-appearance: none; }
 
 .inp-block { display: block; width: 100%; }
 
-.inp-noborder { border: none; padding: 0.5rem 0; }
+.inp-noborder { border: none; padding: 5px 0; }
 
-.select-noborder { -moz-appearance: none; -webkit-appearance: none; padding: 0.5rem 0.8rem; font-size: inherit; display: inline-block; vertical-align: middle; background: none; border: none; }
-
-
-/* 向右的箭头 */
-.arrow-r { position: relative; }
-
-.arrow-r::before { content: ""; position: absolute; top: 50%; right: 0.3rem; width: 1rem; height: 1rem; margin-top: -0.35rem; border: solid rgba(0, 0, 0, 0.2); border-width: 0.2rem 0.2rem 0 0; }
-
+.select-noborder { -moz-appearance: none; -webkit-appearance: none; padding: 5px 8px; font-size: inherit; display: inline-block; vertical-align: middle; background: none; border: none; }
 
 
 .text-left { text-align: left; }
@@ -187,36 +180,32 @@ table { border-collapse: collapse; border-spacing: 0; }
 .img-bespread{ width: 100%;}
 
 
-.nav { height: 4rem; background: #EB6001; color: #FFF; font-size: 1.6rem; line-height: 4rem; }
+.nav { height: 40px; background: #EB6001; color: #FFF; font-size: 16px; line-height: 40px; }
 .nav ul { margin: 0; padding: 0; list-style: none; }
 .nav li { padding-left: 0.6rem; }
 .nav a { height: 4rem; color: #ffd7da; display: block; box-sizing: border-box; text-align: center; }
 .nav a.current { color: #FFF; border-bottom: 0.2rem solid #FFF; }
 
 .subnav { position: fixed; left: 0; top: 0; z-index: 99999; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
-.subnav .cont { width: 20rem; background: #FFF; -moz-border-radius: 0.6rem; -webkit-border-radius: 0.6rem; border-radius: 0.6rem; }
-.subnav .cont a { display: block; padding: 1rem; color: #EB6001; text-align: center; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+.subnav .cont { width: 200px; background: #FFF;  border-radius: 6px; }
+.subnav .cont a { display: block; padding: 10px; color: #EB6001; text-align: center; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 .subnav .cont a:last-child { border-bottom: none; }
 
-.nav ~ .body { padding-top: 4rem; }
+.nav ~ .body { padding-top: 40px; }
 
 .login-banner { line-height: 0; }
 .login-banner img { width: 100%; }
 .login-banner .swiper-pagination-bullet { background: rgba(255, 255, 255, 0.5); opacity: 1; }
 .login-banner .swiper-pagination-bullet.swiper-pagination-bullet-active { background: #EB6001; }
 
-.padding { font-size: 1.6rem; min-height: 4.6rem; padding: 0.8rem 1.2rem; line-height: 2.2rem; border-bottom: 1px solid #eee; }
+.padding { font-size: 16px; min-height: 46px; padding: 8px 12px; line-height: 22px; border-bottom: 1px solid #eee; }
 .section { margin: 0; background: #FFF; overflow: hidden;    box-shadow: 0 3px 3px 0 rgba(0,0,0,.05); }
 .section > *:last-child { border-bottom: none; margin-bottom: -1px; }
 
-.lifenav a { display: block; float: left; width: 25%; padding: 1.5rem 0; border-right: 1px solid #eee; border-bottom: 1px solid #eee; text-align: center; }
-.lifenav .icon { display: block; height: 3rem; font-size: 3rem; color: #EB6001; }
-.lifenav .name { display: block; height: 1.4rem; font-size: 1.4rem; margin-top: 0.8rem; line-height: 1.4rem; color: #666; }
-
-*.mt1rem { margin-top: 1rem; }
+*.mt1rem { margin-top: 10px; }
 
 
-@backWidth :4rem;
+@backWidth :40px;
 .back-top{
     position: fixed;
     width: @backWidth;
@@ -224,7 +213,7 @@ table { border-collapse: collapse; border-spacing: 0; }
     line-height: @backWidth;
     text-align: center;
     color:#FFF;
-    font-size: 1.4rem;
+    font-size: 14px;
     right:10px;
     bottom:20px;
     border-radius: 50%;
@@ -242,7 +231,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   bottom: 0;
   background: rgba(0, 0, 0, .65);
   z-index: 12000;
-  padding: 1rem; }
+  padding: 10px; }
   /* line 120, ../sass/include/base.scss */
   .window-confirm .wrap {
     width: 20rem;
@@ -252,13 +241,13 @@ table { border-collapse: collapse; border-spacing: 0; }
     overflow: hidden; }
     /* line 121, ../sass/include/base.scss */
     .window-confirm .wrap div {
-      font-size: 1.2rem;
+      font-size: 12px;
       border-top: 1px solid #ddd; }
     /* line 122, ../sass/include/base.scss */
     .window-confirm .wrap span {
       display: block;
       text-align: center;
-      padding: 0.6rem;
+      padding: 6px;
       cursor: pointer; }
     /* line 123, ../sass/include/base.scss */
     .window-confirm .wrap span:first-child {
@@ -270,12 +259,12 @@ table { border-collapse: collapse; border-spacing: 0; }
     .window-confirm .wrap p {
       margin: 0;
       text-align: center;
-      font-size: 1.4rem;
-      padding: 1rem;
+      font-size: 14px;
+      padding: 10px;
       font-weight: 700; }
   /* line 127, ../sass/include/base.scss */
   .window-confirm .new-wrap {
-    width: 20rem;
+    width: 200px;
     max-width: 100%;
     margin: 0 auto;
     background: #fff;
@@ -283,44 +272,44 @@ table { border-collapse: collapse; border-spacing: 0; }
     position: relative; }
     /* line 128, ../sass/include/base.scss */
     .window-confirm .new-wrap > div {
-      font-size: 1.2rem; }
+      font-size: 12px; }
     /* line 129, ../sass/include/base.scss */
     .window-confirm .new-wrap > div.btn-close {
-      font-size: 3rem;
+      font-size: 30px;
       position: absolute;
-      right: 0.4rem;
+      right: 4px;
       top: 0;
       z-index: 9999; }
     /* line 130, ../sass/include/base.scss */
     .window-confirm .new-wrap p {
       margin: 0;
       text-align: left;
-      font-size: 1.4rem !important;
+      font-size: 14px !important;
       color: #777; }
     .window-confirm .new-wrap .title {
-      height: 4rem;
-      line-height: 4rem;
-      padding: 0 1rem 0;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px 0;
       border-bottom: 1px solid #ddd; }
 
     .window-confirm .new-wrap section {
-      padding: 1.5rem; }
+      padding: 15px; }
 
   .window-confirm .wrap-icon {
     width: 75%;
-    height: 20rem;
+    height: 200px;
     position: absolute;
     max-width: 100%;
     background:#fff;
     overflow:hidden;
-    padding:2rem 0 3rem 0;
+    padding:20px 0 30px 0;
     text-align:center; 
     right:0;
     left:0;
     bottom:0;
     top:0;
     margin:auto;
-    border-radius: .2em;
+    border-radius: 2px;
     box-shadow: 1px 1px 30px rgba(0,0,0,.3);
     transform:scale(0);
     animation: Popup-animate .5s ease forwards;
@@ -328,17 +317,17 @@ table { border-collapse: collapse; border-spacing: 0; }
   @keyframes Popup-animate { 0% { opacity: 0.7; transform: scale(1) translateY(-50px); }
     100% { opacity: 1; transform: scale(1) translateY(0px); } }
     .window-confirm .wrap-icon .box-icon {
-      font-size: 7.5rem !important;
+      font-size: 75px !important;
       font-weight: normal !important;
       margin: 0; }
     /* line 138, ../sass/include/base.scss */
     .window-confirm .wrap-icon .text-icon {
-      font-size: 2rem;
+      font-size: 20px;
       margin: 0;
       color: #555; }
     /* line 139, ../sass/include/base.scss */
     .window-confirm .wrap-icon > p {
-      padding: 0 2rem; }
+      padding: 0 20px; }
 
 /* 弹出层 */
 /* line 144, ../sass/include/base.scss */
@@ -350,16 +339,16 @@ table { border-collapse: collapse; border-spacing: 0; }
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 12000;
-  padding: 1rem; }
+  padding: 10px; }
   .window-pop .wrap {
-    width: 20rem;
+    width: 200px;
     max-width: 100%;
     margin: 0 auto;
     background: #fff;
     overflow: hidden; }
     .window-pop .wrap div.window-pop-content {
-      font-size: 1.2rem;
-      padding: 1rem;
+      font-size: 12px;
+      padding: 10px;
       display: block; }
     .window-pop .wrap div.window-pop-btns {
       display: flex;
@@ -367,65 +356,14 @@ table { border-collapse: collapse; border-spacing: 0; }
     .window-pop .wrap div.window-pop-btns span {
       display: block;
       text-align: center;
-      padding: 0.6rem;
+      padding: 6px;
       cursor: pointer; }
     .window-pop .wrap div.window-pop-btns span:first-child {
       border-right: 1px solid #ddd; }
     .window-pop .wrap div.window-pop-btns span:active {
       background: #eee; }
     .window-pop .wrap .title {
-      height: 3em;
-      line-height: 3rem;
-      padding: 0 1rem 0;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px 0;
       border-bottom: 1px solid #ddd; }
-
-/* 提示框 */
-/* line 158, ../sass/include/base.scss */
-.window-alert {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 12000;
-  padding: 1rem; }
-  /* line 159, ../sass/include/base.scss */
-  .window-alert p {
-    width: 15rem;
-    max-width: 100%;
-    margin: 0 auto;
-    font-size: 1.6rem;
-    color: #fff;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center; }
-    .alert-light-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999999;
-  font-size: .14rem;
-  transition: all .4s;
-  transition-timing: ease-in;
-  opacity: 1;
-  .msg-box {
-    padding: 15px 30px 15px 30px;
-    position: absolute;
-    z-index: 2;
-    // top: 200px;
-    color: white;
-    border-radius: 5px;
-  }
-  .bg-box {
-    padding: 15px 30px 15px 30px;
-    position: absolute;
-    z-index: 1;
-    // top: 200px;
-    background: black;
-    color: black;
-    opacity: .6;
-    border-radius: 5px;
-  }
-}

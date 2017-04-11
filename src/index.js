@@ -1,18 +1,13 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { AppContainer as HotLoader } from "react-hot-loader"     //react-hot-loader  热更新可以保存状态  
-
-import { createStore, applyMiddleware } from "redux"
-import thunk from "redux-thunk"
 import { Provider } from "react-redux"
+import FastClick from "fastclick"
 
 import App from "app"
+import store from "store"
 
-import reducer from "./reducers"
-const store = createStore(
-    reducer,
-    applyMiddleware(thunk)
-);
+FastClick.attach(document.body)     //解决移动端300ms延迟问题
 
 const render = ( Component ) => {
     ReactDOM.render(
