@@ -17,10 +17,11 @@ import getMusicDetail from  "./action"
 export default class MusicDetail extends Component {
   render() {
     const {info:{info}} = this.props
+    console.log('info',info)
     return (
-      <div>
+      <div className="header-margin fz20">
         <h2>歌曲背景故事</h2>
-        <pre>{info}</pre>
+        <p className="padding fz20">{info}</p>
         <button onClick={ ()=> history.back()}>返回</button>
       </div>
     )

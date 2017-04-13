@@ -45,7 +45,7 @@ export default class Input extends React.Component {
           step={0.01}
           onChange={(value)=> onSizeChange(value)}
           />
-        <h2>当前颜色 {color}</h2>
+        <h2 style={{marginTop:".8rem"}}>当前颜色 {color}</h2>
         <input type="color" onChange={onColorChange} placeholder="请输入大小" />
       </div>
     )

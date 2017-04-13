@@ -30,7 +30,7 @@ export default class About extends React.Component{
   render(){
       const {onBtnClick,isShow} = this.props;
       return (
-        <div>
+        <div class="header-margin fz20">
           <h2>关于我们</h2>
           <Link to="" onClick={this.onGoBack}>返回</Link>
           <button onClick= { ()=> onBtnClick(isShow)}>dispatch通知显示弹窗组件</button>

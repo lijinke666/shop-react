@@ -5,7 +5,7 @@ import "./styles.less"
 export default class Footer extends React.Component {
     render() {
         return (
-            <footer className="section flex text-center flex-vc flex-hc">
+            <footer className="section flex text-center flex-vc flex-hc fz16">
                 <IndexLink to="/" activeClassName={"active"} className="box-flex-1">
                     <div className="icon icon-dianhua"></div>
                     <span>首页</span>
