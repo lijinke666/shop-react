@@ -2,13 +2,11 @@ const helper = {
   host:"http://localhost",
   port:"8000",
   async getJson(url) {
-    return (
-      await (fetch(url))
-      ).json()
+    return (await fetch(url)).json()
   },
   async postJson(url,data){
     return (
-      await fetch(url,{
+      await fetch(`${this.host}:${this.port}${url}`,{
         method:"POST",
         mode: "cors",
         headers: { //自动添加

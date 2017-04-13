@@ -1,4 +1,5 @@
 import React from 'react'
+import {Toast,Card} from 'antd-mobile'
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux"     //绑定action的函数
 import { getMusicData } from "./action"
@@ -23,24 +24,29 @@ export default class Music extends React.Component {
     return (
       <div className="music-root" key="music">
         {
-          data.length>0
-            ? <table key="table">
+          data.length > 0
+            ? <div className="section padding" key="items">
               {
                 data.map(item => {
                   let { id, name, category, fans } = item
                   return (
-                    <tr key={id}>
-                      <td>id:{id}</td>
-                      <td>姓名：{name}</td>
-                      <td>分类：{category}</td>
-                      <td>粉丝：{fans}</td>
-                      <td><Link to={`music/${id}`}>查看歌曲信息</Link></td>
-                    </tr>
+                    <Card full className="item" key={id}>
+                      <Card.Header
+                        title={`姓名:${name}`}
+                        thumb={"images/banner1.jpg"}
+                      />
+                      <Card.Body>
+                        <div><Link to={`music/${id}`}>查看歌曲信息</Link></div>
+                      </Card.Body>
+                      <Card.Footer
+                        content={`粉丝:${fans}`}
+                        extra={`分类:${category}`}
+                      />
                   )
                 })
               }
-            </table>
-            : <p>加载中。。。</p>
+            </div>
+            :  Toast.loading("加载中..")
         }
       </div>
     )

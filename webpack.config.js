@@ -27,7 +27,6 @@ module.exports = (env) => {
             hot: true,            //热更新
             inline: true,         //iframe 模式
             historyApiFallback: true,    //浏览器 history
-            host:"0.0.0.0",
             stats: {
                 color: true,      //输出有颜色的信息
                 errors: true,     //显示错误信息
@@ -91,7 +90,7 @@ module.exports = (env) => {
                                 "postcss-loader",
                                 {
                                     loader: "less-loader",
-                                    query: {
+                                    options: {
                                         sourceMap: false,
                                     },
                                 },

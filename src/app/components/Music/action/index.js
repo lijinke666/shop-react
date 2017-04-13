@@ -5,7 +5,7 @@ const GET_MUSIC_DATA = "getMusicData"
 
 export function getMusicData(){
   return async function(dispatch){       //组件redux 绑定映射dispatch过来
-    let data = await helper.postJson(`${host}:${port}/music`)
+    let data = await helper.postJson('/music')
     //发送action到reducer
     setTimeout(()=>{     //模拟一个网络延迟的情况
       dispatch({
